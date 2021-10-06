@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  font-family: "Mulish", sans-serif;
+}
+
+body.light_mode {
+  background-color: #ececec;
+}
+
+body.dark_mode {
+  background-color: #093545;
+}
+
+main {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .right_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  width: 60vh;
+  padding: 20px;
+}
+
+main .right_container h1 {
+  margin-bottom: 30px;
+}
+
+main .right_container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+main .right_container #login-id,
+main .right_container #login-password {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-start;
+}
+
+main .right_container .first__contain,
+main .right_container .second__contain {
+  margin: 10px 0;
+  position: relative;
+}
+
+main .right_container .first__contain span,
+main .right_container .second__contain span {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: -1;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+main .right_container .first__contain input,
+main .right_container .second__contain input {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-top: 15px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+main .right_container .first__contain input:focus, main .right_container .first__contain input:active,
+main .right_container .second__contain input:focus,
+main .right_container .second__contain input:active {
+  outline: 0;
+}
+
+main .right_container .first__contain input:focus + span,
+main .right_container .second__contain input:focus + span {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+main .right_container .first__contain input:focus::-webkit-input-placeholder,
+main .right_container .second__contain input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .right_container .first__contain input:focus:-ms-input-placeholder,
+main .right_container .second__contain input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .right_container .first__contain input:focus::-ms-input-placeholder,
+main .right_container .second__contain input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .right_container .first__contain input:focus::placeholder,
+main .right_container .second__contain input:focus::placeholder {
+  color: transparent;
+}
+
+main .right_container label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-start;
+}
+
+main .right_container .third__contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .right_container .third__contain a {
+  text-decoration: none;
+  color: black;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+main .right_container .third__contain a:hover {
+  text-decoration: underline;
+}
+
+main .right_container .fourth__contain {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 10px 0;
+}
+
+main .right_container .fourth__contain input {
+  margin-left: 5px;
+}
+
+main .right_container .fourth__contain label {
+  margin-left: 10px;
+}
+
+main .right_container button {
+  font-family: inherit;
+  border: 0;
+  border-radius: 8px;
+  width: 80%;
+  height: 40px;
+  margin: 10px;
+  background-color: #20df7f;
+}
+
+main .right_container button:focus {
+  outline: 0;
+}
+
+main .right_container button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+footer {
+  position: relative;
+  height: 20vh;
+  background-color: transparent;
+}
+
+footer img {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: 50px;
+  top: 30%;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+footer .svg-container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
+footer svg {
+  height: 100%;
+  width: auto !important;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+@media (max-width: 720px) {
+  footer img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 350px) {
+  footer img {
+    height: 25px;
+    width: 25px;
+  }
+}
+/*# sourceMappingURL=login.css.map */
