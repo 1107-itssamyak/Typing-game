@@ -14,15 +14,7 @@ body {
   font-family: "Mulish", sans-serif;
 }
 
-body.light_mode {
-  background-color: #ececec;
-}
-
-body.dark_mode {
-  background-color: #093545;
-}
-
-main {
+body main {
   min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,7 +27,7 @@ main {
           justify-content: center;
 }
 
-main .right_container {
+body main .right_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,11 +41,23 @@ main .right_container {
   padding: 20px;
 }
 
-main .right_container h1 {
-  margin-bottom: 30px;
+body main .right_container h1 {
+  text-transform: capitalize;
+  font-size: 3rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
 }
 
-main .right_container div {
+body main .right_container div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,8 +71,8 @@ main .right_container div {
   width: 100%;
 }
 
-main .right_container #login-id,
-main .right_container #login-password {
+body main .right_container #login-id,
+body main .right_container #login-password {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,14 +80,14 @@ main .right_container #login-password {
   justify-self: flex-start;
 }
 
-main .right_container .first__contain,
-main .right_container .second__contain {
-  margin: 10px 0;
+body main .right_container .first__contain,
+body main .right_container .second__contain {
+  margin: 15px 0;
   position: relative;
 }
 
-main .right_container .first__contain span,
-main .right_container .second__contain span {
+body main .right_container .first__contain span,
+body main .right_container .second__contain span {
   position: absolute;
   top: 20px;
   left: 10px;
@@ -97,9 +101,12 @@ main .right_container .second__contain span {
   transition: 0.3s ease-in-out;
 }
 
-main .right_container .first__contain input,
-main .right_container .second__contain input {
-  padding: 10px;
+body main .right_container .first__contain input,
+body main .right_container .second__contain input {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1.4;
+  padding: 12px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   margin-top: 15px;
@@ -107,39 +114,40 @@ main .right_container .second__contain input {
   transition: 0.3s ease;
 }
 
-main .right_container .first__contain input:focus, main .right_container .first__contain input:active,
-main .right_container .second__contain input:focus,
-main .right_container .second__contain input:active {
+body main .right_container .first__contain input:focus, body main .right_container .first__contain input:active,
+body main .right_container .second__contain input:focus,
+body main .right_container .second__contain input:active {
   outline: 0;
 }
 
-main .right_container .first__contain input:focus + span,
-main .right_container .second__contain input:focus + span {
+body main .right_container .first__contain input:focus + span,
+body main .right_container .second__contain input:focus + span {
+  font-weight: bold;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
 }
 
-main .right_container .first__contain input:focus::-webkit-input-placeholder,
-main .right_container .second__contain input:focus::-webkit-input-placeholder {
+body main .right_container .first__contain input:focus::-webkit-input-placeholder,
+body main .right_container .second__contain input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-main .right_container .first__contain input:focus:-ms-input-placeholder,
-main .right_container .second__contain input:focus:-ms-input-placeholder {
+body main .right_container .first__contain input:focus:-ms-input-placeholder,
+body main .right_container .second__contain input:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-main .right_container .first__contain input:focus::-ms-input-placeholder,
-main .right_container .second__contain input:focus::-ms-input-placeholder {
+body main .right_container .first__contain input:focus::-ms-input-placeholder,
+body main .right_container .second__contain input:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-main .right_container .first__contain input:focus::placeholder,
-main .right_container .second__contain input:focus::placeholder {
+body main .right_container .first__contain input:focus::placeholder,
+body main .right_container .second__contain input:focus::placeholder {
   color: transparent;
 }
 
-main .right_container label {
+body main .right_container label {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,7 +155,7 @@ main .right_container label {
   justify-self: flex-start;
 }
 
-main .right_container .third__contain {
+body main .right_container .third__contain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,18 +164,18 @@ main .right_container .third__contain {
           align-items: flex-end;
 }
 
-main .right_container .third__contain a {
+body main .right_container .third__contain a {
+  text-transform: capitalize;
   text-decoration: none;
-  color: black;
   margin-left: 0;
   margin-right: 10px;
 }
 
-main .right_container .third__contain a:hover {
+body main .right_container .third__contain a:hover {
   text-decoration: underline;
 }
 
-main .right_container .fourth__contain {
+body main .right_container .fourth__contain {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -175,45 +183,50 @@ main .right_container .fourth__contain {
   margin: 10px 0;
 }
 
-main .right_container .fourth__contain input {
+body main .right_container .fourth__contain input {
   margin-left: 5px;
 }
 
-main .right_container .fourth__contain label {
+body main .right_container .fourth__contain label {
+  text-transform: capitalize;
   margin-left: 10px;
 }
 
-main .right_container button {
+body main .right_container .fifth__contain button,
+body main .right_container .sixth__contain button {
+  font-size: 16px;
+  font-weight: bold;
   font-family: inherit;
   border: 0;
   border-radius: 8px;
-  width: 80%;
+  width: 100%;
   height: 40px;
-  margin: 10px;
-  background-color: #20df7f;
+  margin: 15px 10px;
 }
 
-main .right_container button:focus {
+body main .right_container .fifth__contain button:focus,
+body main .right_container .sixth__contain button:focus {
   outline: 0;
 }
 
-main .right_container button:active {
+body main .right_container .fifth__contain button:active,
+body main .right_container .sixth__contain button:active {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
 }
 
-footer {
+body footer {
   position: relative;
   height: 20vh;
   background-color: transparent;
 }
 
-footer img {
+body footer img {
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   left: 50px;
-  top: 30%;
+  bottom: 30%;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -221,35 +234,157 @@ footer img {
   -webkit-transform-origin: center center;
           transform-origin: center center;
   z-index: 1;
-  overflow-x: hidden;
 }
 
-footer .svg-container {
+body footer .svg-container {
+  height: 100%;
   width: 100%;
   position: absolute;
-  left: 0;
   bottom: 0;
-  top: 0;
+  left: 0;
 }
 
-footer svg {
-  height: 100%;
-  width: auto !important;
+body footer svg {
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  height: auto !important;
+  width: 100vw !important;
   -webkit-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
 }
 
+body.light_mode {
+  background-color: #ececec;
+}
+
+body.light_mode main .first__contain input,
+body.light_mode main .second__contain input {
+  background-color: #093545;
+  color: white;
+}
+
+body.light_mode main .first__contain input::-webkit-input-placeholder,
+body.light_mode main .second__contain input::-webkit-input-placeholder {
+  font-weight: 300;
+  color: white;
+}
+
+body.light_mode main .first__contain input:-ms-input-placeholder,
+body.light_mode main .second__contain input:-ms-input-placeholder {
+  font-weight: 300;
+  color: white;
+}
+
+body.light_mode main .first__contain input::-ms-input-placeholder,
+body.light_mode main .second__contain input::-ms-input-placeholder {
+  font-weight: 300;
+  color: white;
+}
+
+body.light_mode main .first__contain input::placeholder,
+body.light_mode main .second__contain input::placeholder {
+  font-weight: 300;
+  color: white;
+}
+
+body.light_mode main .third__contain a {
+  margin-top: 10px;
+  color: black;
+}
+
+body.light_mode main .fourth__contain input {
+  color: black;
+}
+
+body.light_mode main .fifth__contain button,
+body.light_mode main .sixth__contain button {
+  background-color: #20df7f;
+}
+
+body.dark_mode {
+  background-color: #093545;
+}
+
+body.dark_mode main h1 {
+  color: #fff;
+}
+
+body.dark_mode main .first__contain input,
+body.dark_mode main .second__contain input {
+  background-color: #224957;
+}
+
+body.dark_mode main .first__contain input::-webkit-input-placeholder,
+body.dark_mode main .second__contain input::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+body.dark_mode main .first__contain input:-ms-input-placeholder,
+body.dark_mode main .second__contain input:-ms-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+body.dark_mode main .first__contain input::-ms-input-placeholder,
+body.dark_mode main .second__contain input::-ms-input-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+body.dark_mode main .first__contain input::placeholder,
+body.dark_mode main .second__contain input::placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+body.dark_mode main .first__contain span,
+body.dark_mode main .second__contain span {
+  color: #fff;
+}
+
+body.dark_mode main .third__contain a {
+  margin-top: 10px;
+  color: #20df7f;
+}
+
+body.dark_mode main .fourth__contain label {
+  color: #fff;
+}
+
+body.dark_mode main .fifth__contain button,
+body.dark_mode main .sixth__contain button {
+  background-color: #20df7f;
+  color: #fff;
+}
+
 @media (max-width: 720px) {
-  footer img {
+  body .third__contain,
+  body .fourth__contain {
+    font-size: 18px;
+  }
+  body .fifth__contain button,
+  body .sixth__contain button {
+    font-size: 18px;
+  }
+  body footer img {
+    left: 30px;
     height: 40px;
     width: 40px;
   }
 }
 
 @media (max-width: 350px) {
-  footer img {
-    height: 25px;
-    width: 25px;
+  body main .first__contain input,
+  body main .second__contain input {
+    padding: 15px 10px;
+  }
+  body footer img {
+    top: 30px;
+    left: 30px;
+    height: 30px;
+    width: 30px;
   }
 }
 /*# sourceMappingURL=login.css.map */
