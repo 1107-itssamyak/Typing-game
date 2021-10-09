@@ -82,7 +82,7 @@ body main .right_container #login-password {
 
 body main .right_container .first__contain,
 body main .right_container .second__contain {
-  margin: 15px 0;
+  padding-bottom: 15px;
   position: relative;
 }
 
@@ -156,6 +156,7 @@ body main .right_container label {
 }
 
 body main .right_container .third__contain {
+  padding-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,47 +259,63 @@ body.light_mode {
   background-color: #ececec;
 }
 
-body.light_mode main .first__contain input,
-body.light_mode main .second__contain input {
+body.light_mode main .right_container .first__contain input,
+body.light_mode main .right_container .second__contain input {
   background-color: #093545;
   color: white;
 }
 
-body.light_mode main .first__contain input::-webkit-input-placeholder,
-body.light_mode main .second__contain input::-webkit-input-placeholder {
+body.light_mode main .right_container .first__contain input::-webkit-input-placeholder,
+body.light_mode main .right_container .second__contain input::-webkit-input-placeholder {
   font-weight: 300;
   color: white;
 }
 
-body.light_mode main .first__contain input:-ms-input-placeholder,
-body.light_mode main .second__contain input:-ms-input-placeholder {
+body.light_mode main .right_container .first__contain input:-ms-input-placeholder,
+body.light_mode main .right_container .second__contain input:-ms-input-placeholder {
   font-weight: 300;
   color: white;
 }
 
-body.light_mode main .first__contain input::-ms-input-placeholder,
-body.light_mode main .second__contain input::-ms-input-placeholder {
+body.light_mode main .right_container .first__contain input::-ms-input-placeholder,
+body.light_mode main .right_container .second__contain input::-ms-input-placeholder {
   font-weight: 300;
   color: white;
 }
 
-body.light_mode main .first__contain input::placeholder,
-body.light_mode main .second__contain input::placeholder {
+body.light_mode main .right_container .first__contain input::placeholder,
+body.light_mode main .right_container .second__contain input::placeholder {
   font-weight: 300;
   color: white;
 }
 
-body.light_mode main .third__contain a {
+body.light_mode main .right_container .first__contain input:focus::-webkit-input-placeholder,
+body.light_mode main .right_container .second__contain input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body.light_mode main .right_container .first__contain input:focus:-ms-input-placeholder,
+body.light_mode main .right_container .second__contain input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+body.light_mode main .right_container .first__contain input:focus::-ms-input-placeholder,
+body.light_mode main .right_container .second__contain input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+body.light_mode main .right_container .first__contain input:focus::placeholder,
+body.light_mode main .right_container .second__contain input:focus::placeholder {
+  color: transparent;
+}
+
+body.light_mode main .right_container .third__contain a {
   margin-top: 10px;
   color: black;
 }
 
-body.light_mode main .fourth__contain input {
-  color: black;
-}
-
-body.light_mode main .fifth__contain button,
-body.light_mode main .sixth__contain button {
+body.light_mode main .right_container .fifth__contain button,
+body.light_mode main .right_container .sixth__contain button {
   background-color: #20df7f;
 }
 
@@ -306,85 +323,118 @@ body.dark_mode {
   background-color: #093545;
 }
 
-body.dark_mode main h1 {
+body.dark_mode main .right_container h1 {
   color: #fff;
 }
 
-body.dark_mode main .first__contain input,
-body.dark_mode main .second__contain input {
+body.dark_mode main .right_container .first__contain input,
+body.dark_mode main .right_container .second__contain input {
+  color: #fff;
   background-color: #224957;
 }
 
-body.dark_mode main .first__contain input::-webkit-input-placeholder,
-body.dark_mode main .second__contain input::-webkit-input-placeholder {
+body.dark_mode main .right_container .first__contain input:focus::-webkit-input-placeholder,
+body.dark_mode main .right_container .second__contain input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body.dark_mode main .right_container .first__contain input:focus:-ms-input-placeholder,
+body.dark_mode main .right_container .second__contain input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+body.dark_mode main .right_container .first__contain input:focus::-ms-input-placeholder,
+body.dark_mode main .right_container .second__contain input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+body.dark_mode main .right_container .first__contain input:focus::placeholder,
+body.dark_mode main .right_container .second__contain input:focus::placeholder {
+  color: transparent;
+}
+
+body.dark_mode main .right_container .first__contain input::-webkit-input-placeholder,
+body.dark_mode main .right_container .second__contain input::-webkit-input-placeholder {
   color: #fff;
   font-weight: 300;
 }
 
-body.dark_mode main .first__contain input:-ms-input-placeholder,
-body.dark_mode main .second__contain input:-ms-input-placeholder {
+body.dark_mode main .right_container .first__contain input:-ms-input-placeholder,
+body.dark_mode main .right_container .second__contain input:-ms-input-placeholder {
   color: #fff;
   font-weight: 300;
 }
 
-body.dark_mode main .first__contain input::-ms-input-placeholder,
-body.dark_mode main .second__contain input::-ms-input-placeholder {
+body.dark_mode main .right_container .first__contain input::-ms-input-placeholder,
+body.dark_mode main .right_container .second__contain input::-ms-input-placeholder {
   color: #fff;
   font-weight: 300;
 }
 
-body.dark_mode main .first__contain input::placeholder,
-body.dark_mode main .second__contain input::placeholder {
+body.dark_mode main .right_container .first__contain input::placeholder,
+body.dark_mode main .right_container .second__contain input::placeholder {
   color: #fff;
   font-weight: 300;
 }
 
-body.dark_mode main .first__contain span,
-body.dark_mode main .second__contain span {
+body.dark_mode main .right_container .first__contain span,
+body.dark_mode main .right_container .second__contain span {
   color: #fff;
 }
 
-body.dark_mode main .third__contain a {
+body.dark_mode main .right_container .third__contain a {
   margin-top: 10px;
   color: #20df7f;
 }
 
-body.dark_mode main .fourth__contain label {
+body.dark_mode main .right_container .fourth__contain label {
   color: #fff;
 }
 
-body.dark_mode main .fifth__contain button,
-body.dark_mode main .sixth__contain button {
+body.dark_mode main .right_container .fifth__contain button,
+body.dark_mode main .right_container .sixth__contain button {
   background-color: #20df7f;
   color: #fff;
 }
 
 @media (max-width: 720px) {
-  body .third__contain,
-  body .fourth__contain {
+  body main .right_container .third__contain,
+  body main .right_container .fourth__contain {
     font-size: 18px;
   }
-  body .fifth__contain button,
-  body .sixth__contain button {
+  body main .right_container .fifth__contain button,
+  body main .right_container .sixth__contain button {
     font-size: 18px;
   }
   body footer img {
-    left: 30px;
     height: 40px;
     width: 40px;
   }
 }
 
 @media (max-width: 350px) {
-  body main .first__contain input,
-  body main .second__contain input {
-    padding: 15px 10px;
+  body main .right_container {
+    height: 70vh;
+  }
+  body main .right_container h1 {
+    font-size: 28px;
+  }
+  body main .right_container .first__contain input,
+  body main .right_container .second__contain input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  body main .right_container .third__contain,
+  body main .right_container .fourth__contain,
+  body main .right_container .fifth__contain,
+  body main .right_container .sixth__contain {
+    font-size: 14px;
   }
   body footer img {
-    top: 30px;
-    left: 30px;
-    height: 30px;
-    width: 30px;
+    top: 0;
+    left: 10px;
+    height: 10px;
+    width: 10px;
   }
 }
 /*# sourceMappingURL=login.css.map */

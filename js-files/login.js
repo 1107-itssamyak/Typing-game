@@ -19,7 +19,7 @@ button.addEventListener('click', () => {
 })
 
 function dark_svg() {
-    svg[0].style.fill = `#3fea956e`;
+    svg[0].style.fill = `rgba(187, 187, 187, 0.58)`;
     svg[1].style.fill = `#AFA0A0`;
 }
 
