@@ -1,0 +1,213 @@
+$light-mode: #ececec;
+$dark-mode: #2c3e50;
+$green-color: #20df7f;
+$container-bg: #34495e;
+$select-box-color: #a7c5e3;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  transition: background-color 0.4s ease;
+
+  .settings-btn {
+    background-color: #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 6px 18px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .settings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+
+    .setting-form-div {
+      width: 100%;
+
+      select {
+        width: 200px;
+        padding: 5px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+
+    .img-button {
+      height: 30px;
+      width: 30px;
+      margin: 10px;
+      transition: transform 0.5s ease;
+      transform-origin: center center;
+      z-index: 1;
+    }
+
+    small {
+      font-size: 14px;
+    }
+  }
+
+  .settings.hide {
+    transform: translateY(-100%);
+  }
+
+  .container {
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    width: 500px;
+
+    #small {
+      display: none;
+    }
+
+    h2 {
+      padding: 8px;
+      border-radius: 4px;
+      margin: 0 0 40px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .start-button-div {
+      .start-game {
+        color: #fff;
+        border-radius: 8px;
+        border: 0;
+        padding: 10px 40px;
+        margin: 10px;
+      }
+    }
+
+    input {
+      display: none;
+      border: 0;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 100%;
+      padding: 12px 20px;
+      margin-top: 10px;
+    }
+
+    .score-container {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+    }
+
+    .time-container {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+    }
+
+    .end-game-container {
+      background-color: inherit;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+body.light-mode {
+  .settings-btn {
+    border: 1px solid $container-bg;
+  }
+
+  .settings {
+    color: #fff;
+    background-color: $dark-mode;
+  }
+
+  select {
+    background-color: $select-box-color;
+  }
+
+  .container {
+    input {
+      &:focus {
+        outline: 1px solid gray;
+      }
+    }
+
+    .start-button-div {
+      .start-game {
+        background-color: $dark-mode;
+      }
+    }
+
+    h2 {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+body.dark-mode {
+  background-color: $dark-mode;
+
+  .settings {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .settings-btn {
+    border: 1px solid $container-bg;
+  }
+
+  select {
+    background-color: $select-box-color;
+  }
+
+  .container {
+    color: #fff;
+    background-color: $dark-mode;
+
+    .start-button-div {
+      .start-game {
+        background-color: $green-color;
+      }
+    }
+
+    h2 {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
