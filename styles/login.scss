@@ -197,7 +197,7 @@ body {
 }
 
 //? light mode properties are here
-body.light_mode {
+body.light-mode {
   background-color: $bg-light-mode;
 
   main {
@@ -237,7 +237,7 @@ body.light_mode {
 }
 
 //? dark mode properties are here
-body.dark_mode {
+body.dark-mode {
   background-color: $bg-dark-mode;
 
   main {

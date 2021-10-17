@@ -26,10 +26,28 @@ function mode_enabler() {
     if (mode_switch) {
         body.classList.add('light-mode');
         body.classList.remove('dark-mode');
+
+        localStorage.setItem('mode', 'light-mode');
     } else {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
+
+        localStorage.setItem('mode', 'dark-mode');
     }
+}
+
+//setting mode in local storage
+const theme = localStorage.getItem('mode');
+if (theme === "dark-mode") {
+    mode_switch = !mode_switch;
+
+    body.classList.add(theme);
+    body.classList.remove("light-mode");
+    d += 180;
+    button.style.transform = `rotate(180deg)`;
+} else {
+    body.classList.add("light-mode");
+    body.classList.remove("dark-mode");
 }
 
 // Set difficulty to value in ls or medium
@@ -92,7 +110,7 @@ start.addEventListener('click', () => {
     let score = 0;
 
     // Init time
-    let time = 4;
+    let time = 1;
 
     // Generate random word from array
     function getRandomWord() {
@@ -142,7 +160,7 @@ start.addEventListener('click', () => {
         endgameEl.innerHTML = `
         <h1>Time ran out</h1>
         <p>Your final score is ${score}</p>
-        <button onclick="location.reload()">Reload</button>
+        <button onclick="location.reload()" class="reload-button">Reload</button>
       `;
 
         endgameEl.style.display = 'flex';

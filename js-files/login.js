@@ -4,6 +4,20 @@ const svg = document.querySelectorAll('svg path');
 let d = 0;
 let mode_switch = true;
 
+//setting mode in local storage
+const theme = localStorage.getItem('mode');
+if (theme === "dark-mode") {
+    mode_switch = !mode_switch;
+
+    body.classList.add(theme);
+    body.classList.remove("light-mode");
+    d += 180;
+    button.style.transform = `rotate(180deg)`;
+} else {
+    body.classList.add("light-mode");
+    body.classList.remove("dark-mode");
+}
+
 //* light and dark mode switch enabler
 button.addEventListener('click', () => {
     mode_enabler();
@@ -18,14 +32,19 @@ button.addEventListener('click', () => {
     }
 })
 
+
 function mode_enabler() {
     mode_switch = !mode_switch;
     if (mode_switch) {
-        body.classList.add('light_mode');
-        body.classList.remove('dark_mode');
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+
+        localStorage.setItem('mode', 'light-mode');
     } else {
-        body.classList.remove('light_mode');
-        body.classList.add('dark_mode');
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+
+        localStorage.setItem('mode', 'dark-mode');
     }
 }
 

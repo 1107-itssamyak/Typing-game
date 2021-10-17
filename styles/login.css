@@ -255,144 +255,144 @@ body footer svg {
   transition: background-color 0.4s ease;
 }
 
-body.light_mode {
+body.light-mode {
   background-color: #ececec;
 }
 
-body.light_mode main .right_container .first__contain input,
-body.light_mode main .right_container .second__contain input {
+body.light-mode main .right_container .first__contain input,
+body.light-mode main .right_container .second__contain input {
   background-color: #093545;
   color: white;
 }
 
-body.light_mode main .right_container .first__contain input::-webkit-input-placeholder,
-body.light_mode main .right_container .second__contain input::-webkit-input-placeholder {
+body.light-mode main .right_container .first__contain input::-webkit-input-placeholder,
+body.light-mode main .right_container .second__contain input::-webkit-input-placeholder {
   font-weight: 300;
   color: white;
 }
 
-body.light_mode main .right_container .first__contain input:-ms-input-placeholder,
-body.light_mode main .right_container .second__contain input:-ms-input-placeholder {
+body.light-mode main .right_container .first__contain input:-ms-input-placeholder,
+body.light-mode main .right_container .second__contain input:-ms-input-placeholder {
   font-weight: 300;
   color: white;
 }
 
-body.light_mode main .right_container .first__contain input::-ms-input-placeholder,
-body.light_mode main .right_container .second__contain input::-ms-input-placeholder {
+body.light-mode main .right_container .first__contain input::-ms-input-placeholder,
+body.light-mode main .right_container .second__contain input::-ms-input-placeholder {
   font-weight: 300;
   color: white;
 }
 
-body.light_mode main .right_container .first__contain input::placeholder,
-body.light_mode main .right_container .second__contain input::placeholder {
+body.light-mode main .right_container .first__contain input::placeholder,
+body.light-mode main .right_container .second__contain input::placeholder {
   font-weight: 300;
   color: white;
 }
 
-body.light_mode main .right_container .first__contain input:focus::-webkit-input-placeholder,
-body.light_mode main .right_container .second__contain input:focus::-webkit-input-placeholder {
+body.light-mode main .right_container .first__contain input:focus::-webkit-input-placeholder,
+body.light-mode main .right_container .second__contain input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-body.light_mode main .right_container .first__contain input:focus:-ms-input-placeholder,
-body.light_mode main .right_container .second__contain input:focus:-ms-input-placeholder {
+body.light-mode main .right_container .first__contain input:focus:-ms-input-placeholder,
+body.light-mode main .right_container .second__contain input:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-body.light_mode main .right_container .first__contain input:focus::-ms-input-placeholder,
-body.light_mode main .right_container .second__contain input:focus::-ms-input-placeholder {
+body.light-mode main .right_container .first__contain input:focus::-ms-input-placeholder,
+body.light-mode main .right_container .second__contain input:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-body.light_mode main .right_container .first__contain input:focus::placeholder,
-body.light_mode main .right_container .second__contain input:focus::placeholder {
+body.light-mode main .right_container .first__contain input:focus::placeholder,
+body.light-mode main .right_container .second__contain input:focus::placeholder {
   color: transparent;
 }
 
-body.light_mode main .right_container .third__contain a {
+body.light-mode main .right_container .third__contain a {
   margin-top: 10px;
   color: black;
 }
 
-body.light_mode main .right_container .fifth__contain button,
-body.light_mode main .right_container .sixth__contain button {
+body.light-mode main .right_container .fifth__contain button,
+body.light-mode main .right_container .sixth__contain button {
   background-color: #20df7f;
 }
 
-body.dark_mode {
+body.dark-mode {
   background-color: #093545;
 }
 
-body.dark_mode main .right_container h1 {
+body.dark-mode main .right_container h1 {
   color: #fff;
 }
 
-body.dark_mode main .right_container .first__contain input,
-body.dark_mode main .right_container .second__contain input {
+body.dark-mode main .right_container .first__contain input,
+body.dark-mode main .right_container .second__contain input {
   color: #fff;
   background-color: #224957;
 }
 
-body.dark_mode main .right_container .first__contain input:focus::-webkit-input-placeholder,
-body.dark_mode main .right_container .second__contain input:focus::-webkit-input-placeholder {
+body.dark-mode main .right_container .first__contain input:focus::-webkit-input-placeholder,
+body.dark-mode main .right_container .second__contain input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-body.dark_mode main .right_container .first__contain input:focus:-ms-input-placeholder,
-body.dark_mode main .right_container .second__contain input:focus:-ms-input-placeholder {
+body.dark-mode main .right_container .first__contain input:focus:-ms-input-placeholder,
+body.dark-mode main .right_container .second__contain input:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-body.dark_mode main .right_container .first__contain input:focus::-ms-input-placeholder,
-body.dark_mode main .right_container .second__contain input:focus::-ms-input-placeholder {
+body.dark-mode main .right_container .first__contain input:focus::-ms-input-placeholder,
+body.dark-mode main .right_container .second__contain input:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-body.dark_mode main .right_container .first__contain input:focus::placeholder,
-body.dark_mode main .right_container .second__contain input:focus::placeholder {
+body.dark-mode main .right_container .first__contain input:focus::placeholder,
+body.dark-mode main .right_container .second__contain input:focus::placeholder {
   color: transparent;
 }
 
-body.dark_mode main .right_container .first__contain input::-webkit-input-placeholder,
-body.dark_mode main .right_container .second__contain input::-webkit-input-placeholder {
+body.dark-mode main .right_container .first__contain input::-webkit-input-placeholder,
+body.dark-mode main .right_container .second__contain input::-webkit-input-placeholder {
   color: #fff;
   font-weight: 300;
 }
 
-body.dark_mode main .right_container .first__contain input:-ms-input-placeholder,
-body.dark_mode main .right_container .second__contain input:-ms-input-placeholder {
+body.dark-mode main .right_container .first__contain input:-ms-input-placeholder,
+body.dark-mode main .right_container .second__contain input:-ms-input-placeholder {
   color: #fff;
   font-weight: 300;
 }
 
-body.dark_mode main .right_container .first__contain input::-ms-input-placeholder,
-body.dark_mode main .right_container .second__contain input::-ms-input-placeholder {
+body.dark-mode main .right_container .first__contain input::-ms-input-placeholder,
+body.dark-mode main .right_container .second__contain input::-ms-input-placeholder {
   color: #fff;
   font-weight: 300;
 }
 
-body.dark_mode main .right_container .first__contain input::placeholder,
-body.dark_mode main .right_container .second__contain input::placeholder {
+body.dark-mode main .right_container .first__contain input::placeholder,
+body.dark-mode main .right_container .second__contain input::placeholder {
   color: #fff;
   font-weight: 300;
 }
 
-body.dark_mode main .right_container .first__contain span,
-body.dark_mode main .right_container .second__contain span {
+body.dark-mode main .right_container .first__contain span,
+body.dark-mode main .right_container .second__contain span {
   color: #fff;
 }
 
-body.dark_mode main .right_container .third__contain a {
+body.dark-mode main .right_container .third__contain a {
   margin-top: 10px;
   color: #20df7f;
 }
 
-body.dark_mode main .right_container .fourth__contain label {
+body.dark-mode main .right_container .fourth__contain label {
   color: #fff;
 }
 
-body.dark_mode main .right_container .fifth__contain button,
-body.dark_mode main .right_container .sixth__contain button {
+body.dark-mode main .right_container .fifth__contain button,
+body.dark-mode main .right_container .sixth__contain button {
   background-color: #20df7f;
   color: #fff;
 }
