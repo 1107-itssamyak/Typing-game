@@ -2,11 +2,11 @@ const body = document.querySelector("body");
 const button = document.getElementById('img-button');
 const svg = document.querySelectorAll('svg path');
 let d = 0;
+let mode_switch = true;
 
 //* light and dark mode switch enabler
 button.addEventListener('click', () => {
-    body.classList.toggle('light_mode');
-    body.classList.toggle('dark_mode');
+    mode_enabler();
 
     d += 180;
     button.style.transform = `rotate(${d}deg)`;
@@ -17,6 +17,17 @@ button.addEventListener('click', () => {
         dark_svg();
     }
 })
+
+function mode_enabler() {
+    mode_switch = !mode_switch;
+    if (mode_switch) {
+        body.classList.add('light_mode');
+        body.classList.remove('dark_mode');
+    } else {
+        body.classList.remove('light_mode');
+        body.classList.add('dark_mode');
+    }
+}
 
 function dark_svg() {
     svg[0].style.fill = `rgba(187, 187, 187, 0.58)`;
