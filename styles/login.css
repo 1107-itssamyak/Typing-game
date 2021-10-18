@@ -289,26 +289,6 @@ body.light-mode main .right_container .second__contain input::placeholder {
   color: white;
 }
 
-body.light-mode main .right_container .first__contain input:focus::-webkit-input-placeholder,
-body.light-mode main .right_container .second__contain input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-body.light-mode main .right_container .first__contain input:focus:-ms-input-placeholder,
-body.light-mode main .right_container .second__contain input:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-body.light-mode main .right_container .first__contain input:focus::-ms-input-placeholder,
-body.light-mode main .right_container .second__contain input:focus::-ms-input-placeholder {
-  color: transparent;
-}
-
-body.light-mode main .right_container .first__contain input:focus::placeholder,
-body.light-mode main .right_container .second__contain input:focus::placeholder {
-  color: transparent;
-}
-
 body.light-mode main .right_container .third__contain a {
   margin-top: 10px;
   color: black;
@@ -351,30 +331,6 @@ body.dark-mode main .right_container .second__contain input:focus::-ms-input-pla
 body.dark-mode main .right_container .first__contain input:focus::placeholder,
 body.dark-mode main .right_container .second__contain input:focus::placeholder {
   color: transparent;
-}
-
-body.dark-mode main .right_container .first__contain input::-webkit-input-placeholder,
-body.dark-mode main .right_container .second__contain input::-webkit-input-placeholder {
-  color: #fff;
-  font-weight: 300;
-}
-
-body.dark-mode main .right_container .first__contain input:-ms-input-placeholder,
-body.dark-mode main .right_container .second__contain input:-ms-input-placeholder {
-  color: #fff;
-  font-weight: 300;
-}
-
-body.dark-mode main .right_container .first__contain input::-ms-input-placeholder,
-body.dark-mode main .right_container .second__contain input::-ms-input-placeholder {
-  color: #fff;
-  font-weight: 300;
-}
-
-body.dark-mode main .right_container .first__contain input::placeholder,
-body.dark-mode main .right_container .second__contain input::placeholder {
-  color: #fff;
-  font-weight: 300;
 }
 
 body.dark-mode main .right_container .first__contain span,

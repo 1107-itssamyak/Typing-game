@@ -81,14 +81,14 @@ start.addEventListener('click', () => {
     start.style.display = "none";
 
     const words = [
-        'sigh',
-        'tense',
+        'Irregardless',
+        'Nonplussed',
         'airplane',
-        'ball',
+        'Enormity',
         'pies',
         'juice',
         'warlike',
-        'bad',
+        'investment',
         'north',
         'dependent',
         'steer',
@@ -96,11 +96,16 @@ start.addEventListener('click', () => {
         'highfalutin',
         'superficial',
         'quince',
-        'eight',
+        'Lieutenant',
         'feeble',
-        'admit',
-        'drag',
-        'loving'
+        'campaign',
+        'circumstances',
+        'loving',
+        'campaign',
+        'defendant',
+        'Environmental',
+        'significant',
+        'Complications',
     ];
 
     // Init word
@@ -110,7 +115,7 @@ start.addEventListener('click', () => {
     let score = 0;
 
     // Init time
-    let time = 1;
+    let time = 10;
 
     // Generate random word from array
     function getRandomWord() {

@@ -213,9 +213,9 @@ body.light-mode {
             color: white;
           }
 
-          &:focus::placeholder {
-            color: transparent;
-          }
+          // &:focus::placeholder {
+          //   color: transparent;
+          // }
         }
       }
 
@@ -256,10 +256,10 @@ body.dark-mode {
             color: transparent;
           }
 
-          &::placeholder {
-            color: #fff;
-            font-weight: 300;
-          }
+          // &::placeholder {
+          //   color: #fff;
+          //   font-weight: 300;
+          // }
         }
 
         span {

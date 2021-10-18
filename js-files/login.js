@@ -1,6 +1,8 @@
 const body = document.querySelector("body");
-const button = document.getElementById('img-button');
-const svg = document.querySelectorAll('svg path');
+const button = document.getElementById("img-button");
+const svg = document.querySelectorAll("svg path");
+
+
 let d = 0;
 let mode_switch = true;
 
@@ -18,6 +20,7 @@ if (theme === "dark-mode") {
     body.classList.remove("dark-mode");
 }
 
+//TODO Event listeners
 //* light and dark mode switch enabler
 button.addEventListener('click', () => {
     mode_enabler();
@@ -31,7 +34,6 @@ button.addEventListener('click', () => {
         dark_svg();
     }
 })
-
 
 function mode_enabler() {
     mode_switch = !mode_switch;
