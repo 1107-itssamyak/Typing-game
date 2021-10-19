@@ -108,7 +108,9 @@ body {
 
       .third__contain {
         padding-bottom: 10px;
+        width: 100%;
         display: flex;
+        justify-content: flex-end;
         align-items: flex-end;
 
         a {
