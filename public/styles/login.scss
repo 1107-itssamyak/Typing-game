@@ -4,6 +4,12 @@ $bg-light-mode: #ececec;
 $bg-dark-mode: #093545;
 $green-color: #20df7f;
 
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,9 +24,7 @@ body {
 
   main {
     min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter();
 
     //   .left_container {
     //     padding: 20px;
@@ -39,16 +43,12 @@ body {
         text-transform: capitalize;
         font-size: 3rem;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter();
         margin-bottom: 20px;
       }
 
       div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include flexCenter();
         width: 100%;
       }
 

@@ -44,10 +44,25 @@ body {
     transform: translateY(0);
     transition: transform 0.3s ease-in-out;
 
+    .sign-out {
+      color: #fff;
+      border-radius: 8px;
+      border: 0;
+      padding: 10px 40px;
+      margin: 10px;
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
     .setting-form-div {
+      font-size: 1.2rem;
+
       select {
         width: 200px;
-        padding: 5px;
+        padding: 5px 0;
+        padding-left: 10px;
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -62,13 +77,14 @@ body {
       height: 30px;
       width: 30px;
       margin: 10px;
+      margin-left: 20px;
       transition: transform 0.5s ease;
       transform-origin: center center;
       z-index: 1;
     }
 
     small {
-      font-size: 14px;
+      font-size: 1.2rem;
     }
   }
 
@@ -79,7 +95,8 @@ body {
   .container {
     padding: 20px;
     border-radius: 4px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     position: relative;
     text-align: center;
     width: 500px;
@@ -161,6 +178,11 @@ body.light-mode {
   .settings {
     color: #fff;
     background-color: $dark-mode;
+
+    .sign-out {
+      color: #000;
+      background-color: $light-mode;
+    }
   }
 
   select {
@@ -198,6 +220,10 @@ body.dark-mode {
   .settings {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
+
+    .sign-out {
+      background-color: $green-color;
+    }
   }
 
   .settings-btn {
@@ -225,6 +251,24 @@ body.dark-mode {
     .end-game-container {
       .reload-button {
         background-color: $green-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    .settings {
+      .setting-form-div {
+        margin-left: 10px;
+
+        select {
+          max-width: 100px;
+        }
+      }
+
+      .sign-out {
+        padding: 5px 12px;
       }
     }
   }

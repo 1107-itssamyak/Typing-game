@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Game</title>
 
-    <link rel="stylesheet" href="/styles/gamepage.css">
+    <link rel="stylesheet" href="./styles/gamepage.css">
     <!--! fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
@@ -16,7 +16,7 @@
 
 <body class="light-mode">
     <div class="settings" id="settings">
-        <img src="/assets/mode-button.svg" alt="mode-button" class="img-button" id="img-button">
+        <img src="./assets/mode-button.svg" alt="mode-button" class="img-button" id="img-button">
         <form id="settings-form">
             <div class="setting-form-div">
                 <label for="difficulty">Difficulty</label>
@@ -28,6 +28,7 @@
             </div>
         </form>
         <small>Hello, <span id="name" class="name">User</span></small>
+        <button type="submit" class="sign-out">Sign Out</button>
     </div>
 
     <div class="container">
@@ -56,21 +57,32 @@
     </button>
 </body>
 
-<script src="/js-files/gamepage.js"></script>
+<script src="./js-files/gamepage.js"></script>
 <script type="module">
-    import app from '/js-files/firebase.js';
+    import app from './js-files/firebase.js';
 
-
-    import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+    import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
     onAuthStateChanged(getAuth(app), (user) => {
         if (user) {
-            console.log("please log in");
+            let n = user.displayName.substr(0, user.displayName.indexOf(" ") + 1);
+            document.getElementById("name").innerText = n
         } else {
-            location.replace("./login.html");
+            location.replace("./index.html");
         }
+    })
+
+    document.querySelector(".sign-out").addEventListener('click', () => {
+        signOut(getAuth()).then(() => {
+            console.log("logged out user successfully");
+            location.replace('./index.html')
+            // Sign-out successful.
+        }).catch((error) => {
+            console.log(error);
+            // An error happened.
+        });
     })
 </script>
 

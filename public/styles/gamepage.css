@@ -58,9 +58,27 @@ body .settings {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
+body .settings .sign-out {
+  color: #fff;
+  border-radius: 8px;
+  border: 0;
+  padding: 10px 40px;
+  margin: 10px;
+}
+
+body .settings .sign-out:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+body .settings .setting-form-div {
+  font-size: 1.2rem;
+}
+
 body .settings .setting-form-div select {
   width: 200px;
-  padding: 5px;
+  padding: 5px 0;
+  padding-left: 10px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -74,6 +92,7 @@ body .settings .img-button {
   height: 30px;
   width: 30px;
   margin: 10px;
+  margin-left: 20px;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -84,7 +103,7 @@ body .settings .img-button {
 }
 
 body .settings small {
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 body .settings.hide {
@@ -95,8 +114,8 @@ body .settings.hide {
 body .container {
   padding: 20px;
   border-radius: 4px;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   position: relative;
   text-align: center;
   width: 500px;
@@ -183,6 +202,11 @@ body.light-mode .settings {
   background-color: #2c3e50;
 }
 
+body.light-mode .settings .sign-out {
+  color: #000;
+  background-color: #ececec;
+}
+
 body.light-mode select {
   background-color: #a7c5e3;
 }
@@ -212,6 +236,10 @@ body.dark-mode .settings {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+body.dark-mode .settings .sign-out {
+  background-color: #20df7f;
+}
+
 body.dark-mode .settings-btn {
   border: 1px solid #34495e;
 }
@@ -235,5 +263,17 @@ body.dark-mode .container h2 {
 
 body.dark-mode .container .end-game-container .reload-button {
   background-color: #20df7f;
+}
+
+@media (max-width: 640px) {
+  body .settings .setting-form-div {
+    margin-left: 10px;
+  }
+  body .settings .setting-form-div select {
+    max-width: 100px;
+  }
+  body .settings .sign-out {
+    padding: 5px 12px;
+  }
 }
 /*# sourceMappingURL=gamepage.css.map */

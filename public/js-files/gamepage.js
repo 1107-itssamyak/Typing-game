@@ -75,6 +75,7 @@ settingsForm.addEventListener('change', e => {
 const start = document.getElementById("start-game")
 
 start.addEventListener('click', () => {
+    difficultySelect.style.display = "none";
     text.style.display = "block";
     small.style.display = "block";
     text.focus();
@@ -119,7 +120,7 @@ start.addEventListener('click', () => {
 
     // Generate random word from array
     function getRandomWord() {
-        return words[Math.floor(Math.random() * words.length)];
+        return words[Math.floor(Math.random() * words.length) + 1];
     }
 
     // Add word to DOM
@@ -183,7 +184,6 @@ start.addEventListener('click', () => {
         const insertedText = e.target.value;
 
         if (insertedText === randomWord) {
-            difficultySelect.style.display = "none";
             addWordToDOM();
             updateScore();
 
@@ -191,11 +191,11 @@ start.addEventListener('click', () => {
             e.target.value = '';
 
             if (difficulty === 'hard') {
-                time += 0;
-            } else if (difficulty === 'medium') {
                 time += 2;
-            } else {
+            } else if (difficulty === 'medium') {
                 time += 3;
+            } else {
+                time += 5;
             }
 
             updateTime();
