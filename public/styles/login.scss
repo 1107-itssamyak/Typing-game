@@ -160,6 +160,12 @@ body {
           }
         }
       }
+
+      .seventh__contain {
+        font-weight: 500;
+        padding: 10px;
+        transition: display 2s ease-in;
+      }
     }
   }
 
@@ -234,6 +240,10 @@ body.light-mode {
           background-color: $green-color;
         }
       }
+
+      .seventh__contain {
+        color: $bg-dark-mode;
+      }
     }
   }
 }
@@ -287,6 +297,10 @@ body.dark-mode {
           background-color: $green-color;
           color: #fff;
         }
+      }
+
+      .seventh__contain {
+        background-color: #fff;
       }
     }
   }

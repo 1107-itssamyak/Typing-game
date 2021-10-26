@@ -13,6 +13,7 @@ const body = document.querySelector("body");
 const button = document.getElementById("img-button");
 let d = 0;
 let mode_switch = true;
+let count = 0;
 
 //* light and dark mode switch enabler
 button.addEventListener('click', () => {
@@ -82,10 +83,10 @@ start.addEventListener('click', () => {
     start.style.display = "none";
 
     const words = [
-        'Irregardless',
-        'Nonplussed',
+        'irregardless',
+        'nonplussed',
         'airplane',
-        'Enormity',
+        'enormity',
         'pies',
         'juice',
         'warlike',
@@ -97,16 +98,16 @@ start.addEventListener('click', () => {
         'highfalutin',
         'superficial',
         'quince',
-        'Lieutenant',
+        'lieutenant',
         'feeble',
         'campaign',
         'circumstances',
         'loving',
         'campaign',
         'defendant',
-        'Environmental',
+        'environmental',
         'significant',
-        'Complications',
+        'complications',
     ];
 
     // Init word
@@ -116,7 +117,7 @@ start.addEventListener('click', () => {
     let score = 0;
 
     // Init time
-    let time = 10;
+    let time = 30;
 
     // Generate random word from array
     function getRandomWord() {
@@ -139,6 +140,12 @@ start.addEventListener('click', () => {
     function updateTime() {
         time--;
         timeEl.innerHTML = time + 's';
+
+        if (time === 100 || score === 100) {
+            clearInterval(timeInterval);
+            //ending game 
+            gameOverviaMaxScore();
+        }
 
         if (time === 0) {
             clearInterval(timeInterval);
@@ -168,7 +175,29 @@ start.addEventListener('click', () => {
         <p>Your final score is ${score}</p>
         <button onclick="location.reload()" class="reload-button">Reload</button>
       `;
+        endgameEl.style.display = 'flex';
+    }
 
+    function gameOverviaMaxScore() {
+        const heading = document.getElementById("heading");
+        const small = document.getElementById("small");
+        // word
+        const ti = document.querySelector(".time-container");
+        const sc = document.querySelector(".score-container");
+
+        difficultySelect.style.display = "block";
+        heading.style.opacity = 0;
+        small.style.opacity = 0;
+        word.style.opacity = 0;
+        ti.style.opacity = 0;
+        sc.style.opacity = 0;
+        text.style.display = 'none';
+
+        endgameEl.innerHTML = `
+        <h1>You reached Game High Score!!</h1>
+        <p>Your final score is ${score}</p>
+        <button onclick="location.reload()" class="reload-button">Reload</button>
+      `;
         endgameEl.style.display = 'flex';
     }
 

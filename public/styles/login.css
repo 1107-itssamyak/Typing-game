@@ -219,6 +219,13 @@ body main .right_container .sixth__contain button:active {
           transform: scale(0.98);
 }
 
+body main .right_container .seventh__contain {
+  font-weight: 500;
+  padding: 10px;
+  -webkit-transition: display 2s ease-in;
+  transition: display 2s ease-in;
+}
+
 body footer {
   position: relative;
   height: 20vh;
@@ -302,6 +309,10 @@ body.light-mode main .right_container .sixth__contain button {
   background-color: #20df7f;
 }
 
+body.light-mode main .right_container .seventh__contain {
+  color: #093545;
+}
+
 body.dark-mode {
   background-color: #093545;
 }
@@ -354,6 +365,10 @@ body.dark-mode main .right_container .fifth__contain button,
 body.dark-mode main .right_container .sixth__contain button {
   background-color: #20df7f;
   color: #fff;
+}
+
+body.dark-mode main .right_container .seventh__contain {
+  background-color: #fff;
 }
 
 @media (max-width: 720px) {

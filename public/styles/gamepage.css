@@ -183,6 +183,8 @@ body .container .end-game-container {
   left: 0;
   width: 100%;
   height: 100%;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 body .container .end-game-container .reload-button {
@@ -266,6 +268,9 @@ body.dark-mode .container .end-game-container .reload-button {
 }
 
 @media (max-width: 640px) {
+  body .container {
+    width: 400px;
+  }
   body .settings .setting-form-div {
     margin-left: 10px;
   }
@@ -273,6 +278,7 @@ body.dark-mode .container .end-game-container .reload-button {
     max-width: 100px;
   }
   body .settings .sign-out {
+    margin-right: 20px;
     padding: 5px 12px;
   }
 }

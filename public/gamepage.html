@@ -37,7 +37,7 @@
 
         <h1 id="word"></h1>
 
-        <p class="time-container">Time left: <span id="time">10s</span></p>
+        <p class="time-container">Time left: <span id="time">30s</span></p>
 
         <p class="score-container">Score: <span id="score">0</span></p>
 
@@ -68,7 +68,10 @@
     onAuthStateChanged(getAuth(app), (user) => {
         if (user) {
             let n = user.displayName.substr(0, user.displayName.indexOf(" ") + 1);
-            document.getElementById("name").innerText = n
+            if (n === "" || n === null) {
+                n = "Guest";
+            }
+            document.getElementById("name").innerText = n;
         } else {
             location.replace("./index.html");
         }
@@ -77,7 +80,7 @@
     document.querySelector(".sign-out").addEventListener('click', () => {
         signOut(getAuth()).then(() => {
             console.log("logged out user successfully");
-            location.replace('./index.html')
+            location.replace('./index.html');
             // Sign-out successful.
         }).catch((error) => {
             console.log(error);
