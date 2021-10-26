@@ -12,6 +12,7 @@ The User Credentials are safe with the game creator, and so he/she can fun and e
 
 ## PROJECT HOSTED LINK
 
+Do checkout the link of the game given below, and in the about section.
 https://typing-game-a1.web.app/
 
 ## Project Specifications
@@ -28,7 +29,7 @@ https://typing-game-a1.web.app/
 ## FUTURE PLANS
 
 I have been planning to use dictionary API, so the user can enjoy more random and frequently new words, and can have fun typing them.
-Also there are several new features that one can think of like Error dedection when the user is typing, more advanced settings, which includes Word Capitalisation, Sentence Racing Game, and many more.
+Also there are several new features that one can think of like Error dedection when the user is typing, more advanced settings, which includes Word Capitalisation, Sentence Racing Game, leaderboard of highest game scores created by several game players and many more.
 I plan on adding them all in the game so that the user can enjoy randomness of events in the game.
 
 ## IMAGES FOR THE GAME
@@ -41,3 +42,6 @@ I plan on adding them all in the game so that the user can enjoy randomness of e
 ![6](./images/image6.jpg)
 
 ## Thank you
+
+This is a personal project so the code for the game is not available.
+After adding new necessary features to the game, I will upload the code as well.
