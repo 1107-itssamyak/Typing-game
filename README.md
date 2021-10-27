@@ -13,7 +13,10 @@ The User Credentials are safe with the game creator, and so he/she can fun and e
 ## PROJECT HOSTED LINK
 
 Do checkout the link of the game given below, and in the about section.
-https://typing-game-a1.web.app/
+
+```
+The website is under construction
+```
 
 ## Project Specifications
 
