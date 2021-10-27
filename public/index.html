@@ -73,7 +73,14 @@
 </body>
 
 <script src="./js-files/login.js"></script>
-<script type="module">
+
+<script>
+	document.getElementById("submit-button").addEventListener('click', () => {
+		location.replace('./gamepage.html');
+	})
+</script>
+
+<!-- <script type="module">
 	import app from './js-files/firebase.js';
 
 	import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
@@ -118,6 +125,6 @@
 			console.log("please log in to enter the gamepage");
 		}
 	})
-</script>
+</script> -->
 
 </html>
