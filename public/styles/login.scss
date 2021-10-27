@@ -220,10 +220,6 @@ body.light-mode {
             font-weight: 300;
             color: white;
           }
-
-          // &:focus::placeholder {
-          //   color: transparent;
-          // }
         }
       }
 
@@ -267,11 +263,6 @@ body.dark-mode {
           &:focus::placeholder {
             color: transparent;
           }
-
-          // &::placeholder {
-          //   color: #fff;
-          //   font-weight: 300;
-          // }
         }
 
         span {
@@ -300,7 +291,7 @@ body.dark-mode {
       }
 
       .seventh__contain {
-        background-color: #fff;
+        color: #fff;
       }
     }
   }

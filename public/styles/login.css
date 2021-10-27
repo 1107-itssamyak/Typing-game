@@ -368,7 +368,7 @@ body.dark-mode main .right_container .sixth__contain button {
 }
 
 body.dark-mode main .right_container .seventh__contain {
-  background-color: #fff;
+  color: #fff;
 }
 
 @media (max-width: 720px) {
