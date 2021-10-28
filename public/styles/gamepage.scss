@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+
 $light-mode: #ececec;
 $dark-mode: #2c3e50;
 $green-color: #20df7f;
@@ -16,6 +18,7 @@ body {
   margin: 0;
   position: relative;
   transition: background-color 0.4s ease;
+  font-family: Poppins, sans-serif;
 
   .settings-btn {
     background-color: #fff;
@@ -50,6 +53,7 @@ body {
       border: 0;
       padding: 10px 40px;
       margin: 10px;
+      font-family: inherit;
 
       &:active {
         transform: scale(0.98);
@@ -100,6 +104,13 @@ body {
     text-align: center;
     width: 500px;
 
+    #word {
+      font-family: sans-serif;
+      padding: 10px 0;
+
+      transition: 1s ease-in;
+    }
+
     #small {
       display: none;
     }
@@ -121,6 +132,11 @@ body {
         border: 0;
         padding: 10px 40px;
         margin: 10px;
+        font-family: inherit;
+
+        &:active {
+          transform: scale(0.98);
+        }
       }
     }
 
@@ -137,13 +153,15 @@ body {
     .score-container {
       position: absolute;
       top: 60px;
-      right: 20px;
+      right: 25px;
+      padding-top: 10px;
     }
 
     .time-container {
       position: absolute;
       top: 60px;
-      left: 20px;
+      left: 25px;
+      padding-top: 10px;
     }
 
     .end-game-container {
@@ -233,6 +251,8 @@ body.dark-mode {
 
   select {
     background-color: $select-box-color;
+    color: #fff;
+    font-weight: 500;
   }
 
   .container {

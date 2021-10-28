@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
 
 $bg-light-mode: #ececec;
 $bg-dark-mode: #093545;
@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   transition: background-color 0.4s ease;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins", sans-serif;
 
   main {
     min-height: 80vh;
@@ -218,7 +218,11 @@ body.light-mode {
 
           &::placeholder {
             font-weight: 300;
-            color: white;
+            color: #fff;
+          }
+
+          &:focus::placeholder {
+            color: transparent;
           }
         }
       }
@@ -259,6 +263,11 @@ body.dark-mode {
         input {
           color: #fff;
           background-color: #224957;
+
+          &::placeholder {
+            color: #fff;
+            font-weight: 400;
+          }
 
           &:focus::placeholder {
             color: transparent;

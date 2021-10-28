@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -18,6 +19,7 @@ body {
   position: relative;
   -webkit-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
+  font-family: Poppins, sans-serif;
 }
 
 body .settings-btn {
@@ -64,6 +66,7 @@ body .settings .sign-out {
   border: 0;
   padding: 10px 40px;
   margin: 10px;
+  font-family: inherit;
 }
 
 body .settings .sign-out:active {
@@ -121,6 +124,13 @@ body .container {
   width: 500px;
 }
 
+body .container #word {
+  font-family: sans-serif;
+  padding: 10px 0;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
 body .container #small {
   display: none;
 }
@@ -141,6 +151,12 @@ body .container .start-button-div .start-game {
   border: 0;
   padding: 10px 40px;
   margin: 10px;
+  font-family: inherit;
+}
+
+body .container .start-button-div .start-game:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 body .container input {
@@ -156,13 +172,15 @@ body .container input {
 body .container .score-container {
   position: absolute;
   top: 60px;
-  right: 20px;
+  right: 25px;
+  padding-top: 10px;
 }
 
 body .container .time-container {
   position: absolute;
   top: 60px;
-  left: 20px;
+  left: 25px;
+  padding-top: 10px;
 }
 
 body .container .end-game-container {
@@ -248,6 +266,8 @@ body.dark-mode .settings-btn {
 
 body.dark-mode select {
   background-color: #a7c5e3;
+  color: #fff;
+  font-weight: 500;
 }
 
 body.dark-mode .container {
