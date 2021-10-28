@@ -12,10 +12,10 @@ The User Credentials are safe with the game creator, and so he/she can fun and e
 
 ## PROJECT HOSTED LINK
 
-Do checkout the link of the game given below, and in the about section.
+Do checkout the link of the game given below, and in the about section of the github account.
 
 ```
-The website is under construction
+https://typing-game-1.web.app/
 ```
 
 ## Project Specifications
