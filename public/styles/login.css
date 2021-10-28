@@ -224,6 +224,16 @@ body main .right_container .seventh__contain {
   padding: 10px;
   -webkit-transition: display 2s ease-in;
   transition: display 2s ease-in;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+  font-size: 1.2rem;
+}
+
+body main .right_container .seventh__contain .firstdot,
+body main .right_container .seventh__contain .seconddot,
+body main .right_container .seventh__contain .thirddot {
+  opacity: 0;
 }
 
 body footer {

@@ -31,6 +31,14 @@
         <button type="submit" class="sign-out">Sign Out</button>
     </div>
 
+    <div class="title">
+        Logging Out
+        <span id="headingtitle">Guest</span>
+        <span class="firstdot">.</span>
+        <span class="seconddot">.</span>
+        <span class="thirddot">.</span>
+    </div>
+
     <div class="container">
         <h2 id="heading">Speed Typer</h2>
         <small id="small">Type the following:</small>
@@ -58,17 +66,6 @@
 </body>
 
 <script src="./js-files/gamepage.js"></script>
-
-<!-- <script>
-    document.querySelector(".sign-out").addEventListener('click', () => {
-        console.log("logged out user successfully");
-        setTimeout(() => {
-            location.replace('./index.html');
-            // Sign-out successful.
-        }, 2000)
-    })
-</script> -->
-
 <script type="module">
     import app from './js-files/firebase.js';
 
@@ -78,25 +75,44 @@
 
     onAuthStateChanged(getAuth(app), (user) => {
         if (user) {
-            let n = user.displayName.substr(0, user.displayName.indexOf(" ") + 1);
-            if (n === "" || n === null) {
+            let username = JSON.stringify(user.displayName);
+            let n = username.substr(1, username.indexOf(" "));
+            if (n === "") {
                 n = "Guest";
             }
             document.getElementById("name").innerText = n;
+
+            // headingtitle setting
+            document.querySelector("#headingtitle").innerText = n;
+
+            console.log("user is logged in");
         } else {
             location.replace("./index.html");
         }
     })
 
     document.querySelector(".sign-out").addEventListener('click', () => {
-        signOut(getAuth()).then(() => {
-            console.log("logged out user successfully");
-            location.replace('./index.html');
-            // Sign-out successful.
-        }).catch((error) => {
-            console.log(error);
-            // An error happened.
-        });
+        document.querySelector(".title").style.opacity = 70;
+        setTimeout(() => {
+            document.querySelector(".firstdot").style.opacity = 70;
+        }, 400)
+        setTimeout(() => {
+            document.querySelector(".seconddot").style.opacity = 70;
+        }, 600)
+        setTimeout(() => {
+            document.querySelector(".thirddot").style.opacity = 70;
+        }, 800)
+
+        setTimeout(() => {
+            signOut(getAuth()).then(() => {
+                console.log("logged out user successfully");
+                location.replace('./index.html');
+                // Sign-out successful.
+            }).catch((error) => {
+                console.log(error);
+                // An error happened.
+            });
+        }, 1200)
     })
 </script>
 

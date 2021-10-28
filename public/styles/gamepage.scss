@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 100vh;
   margin: 0;
   position: relative;
@@ -89,6 +90,20 @@ body {
 
     small {
       font-size: 1.2rem;
+    }
+  }
+
+  .title {
+    opacity: 0;
+    position: absolute;
+    top: 150px;
+    font-size: 1.4rem;
+    transition: opacity 0.8s ease;
+
+    .firstdot,
+    .seconddot,
+    .thirddot {
+      opacity: 0;
     }
   }
 
@@ -204,6 +219,10 @@ body.light-mode {
     }
   }
 
+  .title {
+    color: #000;
+  }
+
   select {
     background-color: $select-box-color;
   }
@@ -245,6 +264,10 @@ body.dark-mode {
     }
   }
 
+  .title {
+    color: #fff;
+  }
+
   .settings-btn {
     border: 1px solid $container-bg;
   }
@@ -283,6 +306,10 @@ body.dark-mode {
 
     .container {
       width: 400px;
+    }
+
+    .title {
+      top: 200px;
     }
 
     .settings {

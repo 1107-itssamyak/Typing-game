@@ -14,6 +14,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   margin: 0;
   position: relative;
@@ -107,6 +111,21 @@ body .settings .img-button {
 
 body .settings small {
   font-size: 1.2rem;
+}
+
+body .title {
+  opacity: 0;
+  position: absolute;
+  top: 150px;
+  font-size: 1.4rem;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+body .title .firstdot,
+body .title .seconddot,
+body .title .thirddot {
+  opacity: 0;
 }
 
 body .settings.hide {
@@ -227,6 +246,10 @@ body.light-mode .settings .sign-out {
   background-color: #ececec;
 }
 
+body.light-mode .title {
+  color: #000;
+}
+
 body.light-mode select {
   background-color: #a7c5e3;
 }
@@ -258,6 +281,10 @@ body.dark-mode .settings {
 
 body.dark-mode .settings .sign-out {
   background-color: #20df7f;
+}
+
+body.dark-mode .title {
+  color: #fff;
 }
 
 body.dark-mode .settings-btn {
@@ -293,6 +320,9 @@ body.dark-mode .container .end-game-container .reload-button {
   }
   body .container {
     width: 400px;
+  }
+  body .title {
+    top: 200px;
   }
   body .settings .setting-form-div {
     margin-left: 10px;
