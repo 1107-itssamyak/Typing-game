@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  font-family: Poppins, sans-serif;
+}
+
+body .settings-btn {
+  background-color: #fff;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 6px 18px;
+}
+
+body .settings-btn:focus {
+  outline: 0;
+}
+
+body .settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+body .settings .sign-out {
+  color: #fff;
+  border-radius: 8px;
+  border: 0;
+  padding: 10px 40px;
+  margin: 10px;
+  font-family: inherit;
+}
+
+body .settings .sign-out:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+body .settings .setting-form-div {
+  font-size: 1.2rem;
+}
+
+body .settings .setting-form-div select {
+  width: 200px;
+  padding: 5px 0;
+  padding-left: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+body .settings .setting-form-div select:focus {
+  outline: 0;
+}
+
+body .settings .img-button {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  margin-left: 20px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  z-index: 1;
+}
+
+body .settings small {
+  font-size: 1.2rem;
+}
+
+body .title {
+  opacity: 0;
+  position: absolute;
+  top: 150px;
+  font-size: 1.4rem;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+body .title .firstdot,
+body .title .seconddot,
+body .title .thirddot {
+  opacity: 0;
+}
+
+body .settings.hide {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+body .container {
+  padding: 20px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  position: relative;
+  text-align: center;
+  width: 500px;
+}
+
+body .container #word {
+  font-family: sans-serif;
+  padding: 10px 0;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+body .container #small {
+  display: none;
+}
+
+body .container h2 {
+  padding: 8px;
+  border-radius: 4px;
+  margin: 0 0 40px;
+}
+
+body .container h1 {
+  margin: 0;
+}
+
+body .container .start-button-div .start-game {
+  color: #fff;
+  border-radius: 8px;
+  border: 0;
+  padding: 10px 40px;
+  margin: 10px;
+  font-family: inherit;
+}
+
+body .container .start-button-div .start-game:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+body .container input {
+  display: none;
+  border: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 10px;
+}
+
+body .container .score-container {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  padding-top: 10px;
+}
+
+body .container .time-container {
+  position: absolute;
+  top: 60px;
+  left: 25px;
+  padding-top: 10px;
+}
+
+body .container .end-game-container {
+  background-color: inherit;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+body .container .end-game-container .reload-button {
+  color: #fff;
+  border-radius: 8px;
+  border: 0;
+  padding: 10px 40px;
+  margin: 10px;
+}
+
+body.light-mode .settings-btn {
+  border: 1px solid #34495e;
+}
+
+body.light-mode .settings {
+  color: #fff;
+  background-color: #2c3e50;
+}
+
+body.light-mode .settings .sign-out {
+  color: #000;
+  background-color: #ececec;
+}
+
+body.light-mode .title {
+  color: #000;
+}
+
+body.light-mode select {
+  background-color: #a7c5e3;
+}
+
+body.light-mode .container input:focus {
+  outline: 1px solid gray;
+}
+
+body.light-mode .container .start-button-div .start-game {
+  background-color: #2c3e50;
+}
+
+body.light-mode .container h2 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .container .end-game-container .reload-button {
+  background-color: #2c3e50;
+}
+
+body.dark-mode {
+  background-color: #2c3e50;
+}
+
+body.dark-mode .settings {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .settings .sign-out {
+  background-color: #20df7f;
+}
+
+body.dark-mode .title {
+  color: #fff;
+}
+
+body.dark-mode .settings-btn {
+  border: 1px solid #34495e;
+}
+
+body.dark-mode select {
+  background-color: #a7c5e3;
+  color: #fff;
+  font-weight: 500;
+}
+
+body.dark-mode .container {
+  color: #fff;
+  background-color: #2c3e50;
+}
+
+body.dark-mode .container .start-button-div .start-game {
+  background-color: #20df7f;
+}
+
+body.dark-mode .container h2 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .container .end-game-container .reload-button {
+  background-color: #20df7f;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: medium;
+  }
+  body .container {
+    width: 400px;
+  }
+  body .title {
+    top: 200px;
+  }
+  body .settings .setting-form-div {
+    margin-left: 10px;
+  }
+  body .settings .setting-form-div select {
+    max-width: 100px;
+  }
+  body .settings .sign-out {
+    margin-right: 20px;
+    padding: 5px 12px;
+  }
+}
+/*# sourceMappingURL=gamepage.css.map */

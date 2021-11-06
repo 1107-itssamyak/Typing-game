@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Page</title>
+
+	<link rel="stylesheet" href="./styles/login.css">
+	<script src="./js-files/login.js" defer></script>
+	<!--! fontawesome cdn -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+		integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="light-mode">
+	<main>
+		<!--? will add image carousel here in left container -->
+		<!-- <div class="left_container"></div> -->
+
+		<div class="right_container" id="box">
+			<h1>sign in</h1>
+
+			<form id="login-form" onsubmit="login()">
+				<div class="first__contain">
+					<input type="email" id="login-id" required placeholder="Email">
+					<span>Email</span>
+				</div>
+				<div class="second__contain">
+					<input type="password" id="login-password" required placeholder="Password">
+					<span>Password</span>
+				</div>
+				<div class="third__contain">
+					<a href="#" class="forget__password">forget password?</a>
+				</div>
+				<div class="fourth__contain">
+					<input type="checkbox" id="remember-me">
+					<label for="remember-me">
+						remember me
+					</label>
+				</div>
+				<div class="fifth__contain">
+					<button type="submit">Login</button>
+				</div>
+			</form>
+
+			<div class="sixth__contain">
+				<button id="submit-button">
+					Login with
+					<i class="fab fa-google"></i>
+				</button>
+			</div>
+
+			<div class="seventh__contain">
+				Logging you in the Game
+				<span class="firstdot"> .</span>
+				<span class="seconddot">.</span>
+				<span class="thirddot">.</span>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<img src="./assets/mode-button.svg" alt="mode-button" id="img-button">
+		<div class="svg-container">
+			<svg viewBox="0 0 1350 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M0 0L55.8984 4.17052C112.852 8.34104 224.648 16.6821 337.5 30.7977C450.352 45.2341 562.148 65.7659 675 69.9364C787.852 74.1069 899.648 61.5954 1012.5 57.7457C1125.35 53.5751 1237.15 57.7457 1294.1 59.6705L1350 61.5954V111H1294.1C1237.15 111 1125.35 111 1012.5 111C899.648 111 787.852 111 675 111C562.148 111 450.352 111 337.5 111C224.648 111 112.852 111 55.8984 111H0V0Z"
+					fill="#20DF7F" fill-opacity="0.8" />
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M0 44.4L45 53.28C90 62.16 180 79.92 270 75.48C360 71.04 450 44.4 540 26.64C630 8.88 720 0 810 0C900 0 990 8.88 1080 24.42C1170 39.96 1260 62.16 1305 73.26L1350 84.36V111H1305C1260 111 1170 111 1080 111C990 111 900 111 810 111C720 111 630 111 540 111C450 111 360 111 270 111C180 111 90 111 45 111H0V44.4Z"
+					fill="#224957" fill-opacity="0.8" />
+			</svg>
+		</div>
+	</footer>
+</body>
+
+<script type="module">
+	import app from './js-files/firebase.js';
+
+	import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+	// // TODO: Add SDKs for Firebase products that you want to use
+	// // https://firebase.google.com/docs/web/setup#available-libraries
+
+	const auth = getAuth(app);
+	const provider = new GoogleAuthProvider(app);
+
+	document.getElementById("submit-button").addEventListener('click', () => {
+		document.querySelector(".seventh__contain").style.opacity = 70;
+		setTimeout(() => {
+			document.querySelector(".firstdot").style.opacity = 70;
+		}, 450)
+		setTimeout(() => {
+			document.querySelector(".seconddot").style.opacity = 70;
+		}, 600)
+		setTimeout(() => {
+			document.querySelector(".thirddot").style.opacity = 70;
+		}, 800)
+
+		setTimeout(() => {
+			signInWithRedirect(auth, provider);
+			getRedirectResult(auth)
+		}, 2000)
+	})
+
+	onAuthStateChanged(getAuth(app), (user) => {
+		if (user) {
+			console.log("user is logged in");
+			location.replace("./gamepage.html");
+		} else {
+			console.log("please log in to enter the gamepage");
+		}
+	})
+</script>
+
+</html>
