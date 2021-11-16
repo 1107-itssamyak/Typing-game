@@ -45,6 +45,3 @@ I plan on adding them all in the game so that the user can enjoy randomness of e
 ![6](./images/image6.jpg)
 
 ## Thank you
-
-This is a personal project so the code for the game is not available.
-After adding new necessary features to the game, I will upload the code as well.
