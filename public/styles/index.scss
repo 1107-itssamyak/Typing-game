@@ -48,17 +48,24 @@ body {
     transform: translateY(0);
     transition: transform 0.3s ease-in-out;
 
-    .sign-out {
+    .sign-out,
+    .sign-in {
       color: #fff;
       border-radius: 8px;
       border: 0;
+      cursor: pointer;
       padding: 10px 40px;
       margin: 10px;
       font-family: inherit;
+      font-weight: 600;
 
       &:active {
         transform: scale(0.98);
       }
+    }
+
+    .sign-out {
+      display: none;
     }
 
     .setting-form-div {
@@ -68,6 +75,8 @@ body {
         width: 200px;
         padding: 5px 0;
         padding-left: 10px;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -83,6 +92,7 @@ body {
       width: 30px;
       margin: 10px;
       margin-left: 20px;
+      cursor: pointer;
       transition: transform 0.5s ease;
       transform-origin: center center;
       z-index: 1;
@@ -147,6 +157,7 @@ body {
         border: 0;
         padding: 10px 40px;
         margin: 10px;
+        cursor: pointer;
         font-family: inherit;
 
         &:active {
@@ -213,7 +224,8 @@ body.light-mode {
     color: #fff;
     background-color: $dark-mode;
 
-    .sign-out {
+    .sign-out,
+    .sign-in {
       color: #000;
       background-color: $light-mode;
     }
@@ -259,7 +271,8 @@ body.dark-mode {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
 
-    .sign-out {
+    .sign-out,
+    .sign-in {
       background-color: $green-color;
     }
   }
@@ -321,7 +334,8 @@ body.dark-mode {
         }
       }
 
-      .sign-out {
+      .sign-out,
+      .sign-in {
         margin-right: 20px;
         padding: 5px 12px;
       }
